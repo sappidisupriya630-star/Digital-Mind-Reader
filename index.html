@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Mind Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧠 Digital Mind Reader</h1>
+
+    <!-- Category Selection -->
+    <div id="categoryBox">
+        <p>Select Category:</p>
+        <button onclick="start('career')">💼 Career</button>
+        <button onclick="start('movie')">🎬 Movie</button>
+        <button onclick="start('food')">🍔 Food</button>
+    </div>
+
+    <!-- Question Area -->
+    <div id="questionBox" class="hidden">
+        <p id="questionText"></p>
+        <button onclick="answer('yes')">Yes</button>
+        <button onclick="answer('no')">No</button>
+    </div>
+
+    <!-- Result -->
+    <div id="resultBox" class="hidden">
+        <p id="loading"></p>
+        <h2 id="result"></h2>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
