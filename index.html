@@ -2,33 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Digital Mind Reader</title>
+    <title>NeuroSense AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>🧠 Digital Mind Reader</h1>
+<div class="app">
+    <h1>🧠 NeuroSense AI</h1>
+    <p class="subtitle">Cognitive Mind Analysis System</p>
 
-    <!-- Category Selection -->
-    <div id="categoryBox">
-        <p>Select Category:</p>
+    <!-- Category -->
+    <div id="categoryBox" class="card">
+        <p>Select Analysis Mode</p>
         <button onclick="start('career')">💼 Career</button>
         <button onclick="start('movie')">🎬 Movie</button>
         <button onclick="start('food')">🍔 Food</button>
     </div>
 
-    <!-- Question Area -->
-    <div id="questionBox" class="hidden">
-        <p id="questionText"></p>
-        <button onclick="answer('yes')">Yes</button>
-        <button onclick="answer('no')">No</button>
+    <!-- Questions -->
+    <div id="questionBox" class="card hidden">
+        <p id="progress"></p>
+        <h2 id="questionText"></h2>
+        <div class="btn-group">
+            <button onclick="answer('yes')">Yes</button>
+            <button onclick="answer('no')">No</button>
+        </div>
     </div>
 
     <!-- Result -->
-    <div id="resultBox" class="hidden">
-        <p id="loading"></p>
+    <div id="resultBox" class="card hidden">
+        <div id="loading"></div>
         <h2 id="result"></h2>
+        <p id="confidence"></p>
+        <button onclick="location.reload()">🔄 Try Again</button>
     </div>
 </div>
 
